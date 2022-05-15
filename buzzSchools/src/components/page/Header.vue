@@ -1,0 +1,68 @@
+<template>
+  <div>
+      <div class="bg-slate-800 text-white px-[10rem] py-2">
+          <div class="flex justify-between items-center">
+              <div>
+                  <input type="text">
+              </div>
+              <div class="flex justify-between">
+                  <div class="flex">
+                     <div>
+                         <span>
+                             <i class="las la-mail"></i>
+                         </span>
+                         <span>buzzschools@gmail.com</span>
+                     </div>
+                  </div>
+                  <div>
+                      <span class="lab la-twitter"></span>
+                      <span class="lab la-linkedin"></span>
+                      <span class="lab la-facebook-f"></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="bg-white py-4 drop-shadow-md px-[10rem]">
+          <div class="flex items-center justify-between">
+              <div>
+                  buzzschools
+              </div>
+              <div class="flex space-x-6 text-lg">
+                  <div class="border-b-2 border-orange-500">
+                      <h1><a href="">Home</a></h1>
+                  </div>
+                  <div class="hover:border-b-2 hover:border-orange-500">
+                      <h1><a href="">About</a></h1>
+                  </div>
+                  <div class="hover:border-b-2 transition-opacity hover:border-orange-500">
+                      <h1><a href="">Courses</a></h1>
+                  </div>
+                  <div class="hover:border-b-2 transition-opacity hover:border-orange-500">
+                      <h1><a href="">Webinars</a></h1>
+                  </div>
+                  <div class="hover:border-b-2 transition-opacity hover:border-orange-500">
+                      <h1><a href="">Blogs</a></h1>
+                  </div>
+              </div>
+              <div class="flex items-center space-x-6">
+                  <div class="relative top-2 mr-4 cursor-pointer">
+                      <span class="las la-shopping-cart text-xl font-bold"></span>
+                      <span class="bg-orange-500 text-white rounded-full absolute -right-3 -top-4 px-2">4</span>
+                  </div>
+                  <div class="divide-x divide-orange-300 rounded-l-md rounded-r-md bg-orange-500 space-x-3 px-4 py-2">
+                      <router-link to="/" class="text-white">Login</router-link>
+                      <router-link to="/" class="text-white pl-2">Register</router-link>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</template>
+
+<script setup>
+
+</script>
+
+<style>
+
+</style>
