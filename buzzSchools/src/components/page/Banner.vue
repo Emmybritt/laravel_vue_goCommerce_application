@@ -1,7 +1,8 @@
 <template>
-  <div class="bg-gradient-to-r from-purple-900 via-purple-500 to-purple-100 ">
-      <div class="flex" style="rgba(0,0,0,0.6)">
-          <div class="w-1/2 flex flex-col justify-center items-center h-[30rem] py-4">
+<div class=" b-imahe">
+    <div class="bg-gradient-to-r opacity-[0.91] from-slate-900 via-slate-600 to-purple-300 bg-transparent">
+      <div class="flex" >
+          <div class="w-2/3 flex flex-col justify-center items-center h-[30rem] py-4">
           <div class="w-[60%] mx-auto space-y-6">
               <h1 class="uppercase tracking-wide font-source font-bold text-orange-300">Start Learning from home</h1>
               <h1 class="text-4xl text-white font-extrabold font-signika">Get Online Courses from Experienced And Experts</h1>
@@ -13,9 +14,11 @@
           </div>
             
           </div>
-          <div class="w-1/2"></div>
+          <div class="w-1/3"></div>
       </div>
   </div>
+</div>
+  
 </template>
 
 <script setup>
@@ -23,5 +26,9 @@
 </script>
 
 <style>
+.b-imahe{
+  background-image: url('../../assets/images/threestudent.png');
+  background-size:cover
+}
 
 </style>

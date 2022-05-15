@@ -3,7 +3,11 @@
       <div class="bg-slate-800 text-white px-[10rem] py-2">
           <div class="flex justify-between items-center">
               <div>
-                  <input type="text">
+                  
+                  <div class="shadow-md px-3 rounded py-1 text-slate-400" style="background-color:rgba(0,0,0,0.3)">
+                      <input type="text" style="background-color:rgba(0,0,0,0.0)" class="border-none text-slate-400 outline-none transparent" placeholder="Search...">
+                      <span class="las la-search"></span>
+                  </div>
               </div>
               <div class="flex justify-between">
                   <div class="flex">
