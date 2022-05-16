@@ -3,14 +3,18 @@
       <h1 class="text-lg font-bold text-orange-600 text-center">Courses</h1>
       <p class="text-4xl font-signika font-extrabold text-center">Popular Category</p>
       <div class="mt-6">
-          <div class="grid grid-cols-4">
-              <div class="bg-white drop-shadow-md p-3 flex">
-                  <div>
-                      image
+          <div class="grid grid-cols-4 gap-3">
+              <div v-for="category in CourseCategories" :key="category.id">
+                  <a href="#" class="bg-white items-center space-x-1 drop-shadow-md p-3 flex">
+                      <div class="text-orange-600">
+                      <!-- <img :src="category.icon" alt=""> -->
+                      <span :class="category.icon" class="text-3xl"></span>
                   </div>
                   <div>
-                      <h1>Business</h1>
+                      <h1 class="font-bold">{{category.title}}</h1>
+                      <p class="text-sm">{{category.courses}} courses</p>
                   </div>
+                  </a>
                   
               </div>
           </div>
@@ -21,6 +25,8 @@
 <script setup>
 import {computed} from 'vue';
 import {useStore} from 'vuex';
+// 37240 OPAY
+// 6280 MONIEPOINT
 
 const store = useStore();
 

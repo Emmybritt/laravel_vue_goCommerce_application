@@ -14,7 +14,9 @@
           </div>
             
           </div>
-          <div class="w-1/3"></div>
+          <div class="w-1/3">
+            
+          </div>
       </div>
   </div>
 </div>

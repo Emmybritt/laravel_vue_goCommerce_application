@@ -34,7 +34,7 @@ const courseCategories = [
     },
     {
         id: 6,
-        icon: 'image',
+        icon: 'las la-laptop',
         title: 'Programming',
         courses: 109
     },
@@ -51,6 +51,69 @@ const courseCategories = [
         courses: 6
     },
 ];
+
+const popularCourses = [
+    {
+        id: 1,
+        title: 'Nutrition: Build perfect diet and meal plan',
+        amount: 15.00,
+        normalAmount: 24.00,
+        curency: 'USD',
+        image: 'studentwithbook.png',
+        rating: 6,
+        saved: true,
+    },
+    {
+        id: 2,
+        title: 'PHP beginner: Become a PHP master',
+        amount: 'free',
+        normalAmount: 24.00,
+        curency: 'USD',
+        image: 'womanlookin.png',
+        rating: 4,
+        saved: false,
+    },
+    {
+        id: 3,
+        title: 'Nutrition: Build perfect diet and meal plan',
+        amount: 20,
+        normalAmount: 8.00,
+        curency: 'USD',
+        image: 'threestudent.png',
+        rating: 6,
+        saved: false,
+    },
+    {
+        id: 4,
+        title: 'Nutrition: Build perfect diet and meal plan',
+        amount: 30,
+        normalAmount: 16.00,
+        curency: 'USD',
+        image: 'girlwithbook.png',
+        rating: 3,
+        saved: false,
+    },
+    {
+        id: 5,
+        title: 'The creator of maniscrest',
+        amount: 45.00,
+        normalAmount: 50.00,
+        curency: 'USD',
+        image: 'about-students.png',
+        rating: 5,
+        saved: false,
+    },
+    {
+        id: 6,
+        title: 'How to grow your businness in 2022',
+        amount: 15.00,
+        normalAmount: 43.00,
+        curency: 'USD',
+        image: 'threestudent.png',
+        rating: 6,
+        saved: false,
+    },
+]
 
 const sidbarLinks = [
     {
@@ -94,12 +157,29 @@ const store = createStore({
             token: localStorage.getItem("TOKEN"),
             type: null,
         },
+        cart: {
+            itemId: localStorage.getItem('ID'),
+            count: localStorage.getItem('COUNT'),
+        },
         sideBar: [...sidbarLinks],
-        CourseCategories: [...courseCategories]
+        CourseCategories: [...courseCategories],
+        popularCourses: [...popularCourses],
     },
     getters: {},
-    actions: {},
-    mutations: {},
+    actions: {
+        
+    },
+    mutations: {
+       setSavedItemTotrue (state, id) {
+        let course = state.popularCourses.filter(cours => cours.id == id);
+        course.map((sav) => sav.saved = !sav.saved);
+            
+       },
+       setCartItem (state, itemId) {
+        
+        
+       }
+    },
     modules: {},
 });
 

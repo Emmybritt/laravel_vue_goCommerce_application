@@ -16,6 +16,15 @@ module.exports = {
             opacity: '1'
           },
         },
+        'fade-con-out': {
+          'from': {
+            transform: "scale(1,1)",
+          },
+          "to": {
+            transform: "translate(0)",
+            opacity: '1',
+          }
+        },
         'fade-in-up': {
           "from": {
             transform: "translateY(0.76rem)",
@@ -38,7 +47,8 @@ module.exports = {
       animation: {
         'fade-in-down': "fade-in-down 0.2s ease-in-out both",
         'fade-in-up': "fade-in-up 0.1s ease-in-out both",
-        'fade-side-right': "fade-side-right 0.2s ease-in-out both"
+        'fade-side-right': "fade-side-right 0.2s ease-in-out both",
+        'fade-con-out': "fade-con-out 0.2s ease-in-out both"
       },
       borderWidth: {
         6: '6px'

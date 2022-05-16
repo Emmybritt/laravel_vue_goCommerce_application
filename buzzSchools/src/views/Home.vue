@@ -6,7 +6,13 @@
       <div class="px-[8rem]">
          <Level2Component />
       </div>
-      <CourseCategory />
+      <div>
+        <CourseCategory />
+      </div>
+      
+      <div>
+        <PopularCourses />
+      </div>
   </div>
 </template>
 
@@ -14,6 +20,7 @@
 import Banner from '../components/page/Banner.vue'
 import Level2Component from '../components/page/Level2Component.vue'
 import CourseCategory from '../components/page/CourseCategory.vue'
+import PopularCourses from '../components/page/PopularCourses.vue'
 
 </script>
 
