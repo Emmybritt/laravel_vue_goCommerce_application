@@ -13,7 +13,7 @@
             <p class="text-lg font-source text-gray-700 mb-[3rem] leading-snug">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quibusdam, corrupti ipsum provident eveniet illum, enim sit eaque, 
                 deleniti suscipit ex laboriosam accusantium fuga totam ducimus? Sequi quae voluptatem atque.</p>
                 <div class="">
-                    <a href="" class="bg-orange-600 rounded-full text-white px-6 py-3 font-bold font-source">Learn More</a>
+                    <router-link :to="{name: 'About'}" class="bg-orange-600 rounded-full text-white px-6 py-3 font-bold font-source">Learn More</router-link>
                 </div>
           </div>
             

@@ -56,62 +56,86 @@ const popularCourses = [
     {
         id: 1,
         title: 'Nutrition: Build perfect diet and meal plan',
+        description: 'lorem ipsum dolar sita me elave abiento canievala...',
         amount: 15.00,
         normalAmount: 24.00,
         curency: 'USD',
         image: 'studentwithbook.png',
         rating: 6,
         saved: true,
+        duration: '15 hrs 30 min',
+        lessons: 156,
+        level: 'intermediate'
     },
     {
         id: 2,
         title: 'PHP beginner: Become a PHP master',
+        description: 'lorem ipsum dolar sita me elave abiento canievala...',
         amount: 'free',
         normalAmount: 24.00,
         curency: 'USD',
         image: 'womanlookin.png',
         rating: 4,
         saved: false,
+        duration: '45 mins',
+        lessons: 78,
+        level: 'beginner'
     },
     {
         id: 3,
         title: 'Nutrition: Build perfect diet and meal plan',
+        description: 'lorem ipsum dolar sita me elave abiento canievala...',
         amount: 20,
         normalAmount: 8.00,
         curency: 'USD',
         image: 'threestudent.png',
         rating: 6,
         saved: false,
+        duration: '4 hrs',
+        lessons: 26,
+        level: 'intermediate'
     },
     {
         id: 4,
         title: 'Nutrition: Build perfect diet and meal plan',
+        description: 'lorem ipsum dolar sita me elave abiento canievala...',
         amount: 30,
         normalAmount: 16.00,
         curency: 'USD',
         image: 'girlwithbook.png',
         rating: 3,
         saved: false,
+        duration: '8 hrs',
+        lessons: 106,
+        level: 'advance'
     },
     {
         id: 5,
         title: 'The creator of maniscrest',
+        description: 'lorem ipsum dolar sita me elave abiento canievala...',
         amount: 45.00,
         normalAmount: 50.00,
         curency: 'USD',
         image: 'about-students.png',
         rating: 5,
         saved: false,
+        duration: '2 hrs',
+        lessons: 36,
+        level: 'intermediate'
     },
     {
         id: 6,
         title: 'How to grow your businness in 2022',
+        description: 'lorem ipsum dolar sita me elave abiento canievala...',
         amount: 15.00,
         normalAmount: 43.00,
         curency: 'USD',
         image: 'threestudent.png',
         rating: 6,
         saved: false,
+        duration: '9 hrs',
+        lessons: 226,
+        level: 'beginner'
     },
 ]
 
@@ -158,8 +182,11 @@ const store = createStore({
             type: null,
         },
         cart: {
-            itemId: localStorage.getItem('ID'),
-            count: localStorage.getItem('COUNT'),
+            savedItem: [
+                {
+                    productId: localStorage.getItem('id')
+                }
+            ],
         },
         sideBar: [...sidbarLinks],
         CourseCategories: [...courseCategories],

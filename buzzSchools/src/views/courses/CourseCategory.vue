@@ -1,7 +1,6 @@
 <template>
-  <div class="py-[3rem] px-[12rem] mt-[3rem]  bg-slate-50">
-      <h1 class="text-lg font-bold text-orange-600 text-center">Courses</h1>
-      <p class="text-4xl font-signika font-extrabold text-center">Popular Category</p>
+  <div class="py-[3rem] px-[12rem]  bg-slate-50">
+      <p class="text-4xl font-signika font-extrabold text-center">Course Category</p>
       <div class="mt-6">
           <div class="grid grid-cols-4 gap-3">
               <div v-for="category in CourseCategories" :key="category.id">
@@ -18,9 +17,7 @@
                   
               </div>
           </div>
-          <div class="mt-4 flex justify-center">
-          <router-link :to="{name: 'CourseCategory'}" class="text-center font-bold bg-orange-500 text-white px-6 py-2 rounded-lg">View All course categories</router-link>
-          </div>
+          
       </div>
   </div>
 </template>

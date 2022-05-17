@@ -3,7 +3,7 @@
 </script>
 
 <template>
-<div class="font-source">
+<div class="font-source selection:bg-purple-500">
    <router-view></router-view> 
 </div>
 

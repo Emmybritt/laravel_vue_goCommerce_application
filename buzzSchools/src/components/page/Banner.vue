@@ -14,8 +14,21 @@
           </div>
             
           </div>
-          <div class="w-1/3">
-            
+          <div class="w-1/3 flex flex-col justify-center items-center">
+          <h3 class="text-white font-medium text-lg">
+            Learn Modern, cutting edge technologies and other associated courses from core-team members and 
+            industry experts with our premium tutorials and video courses
+          </h3>
+          <div>
+            <form action="" class="w-full mt-6">
+              <div class="w-full">
+                <input type="text" placeholder="Your email" class="font-bold outline-none rounded-md px-3 py-2 w-full text-sm text-gray-600">
+              </div>
+              <div class="w-full">
+              <button class="uppercase w-full bg-orange-500 text-white px-4 py-2 rounded-md">Start Learning</button>
+              </div>
+            </form>
+          </div>
           </div>
       </div>
   </div>
