@@ -16,7 +16,7 @@
                       <del class="font-source text-xl text-gray-400 font-thin">${{popular.normalAmount}}</del>
                       <!-- 7737200018 -->
                   </div>
-                  <h1 class="text-sm font-bold font-source">{{popular.title}}</h1>
+                    <router-link :to="{name: 'SingleCourseView', query:{title: popular.title} }" class="text-sm font-bold font-source">{{popular.title}}</router-link>
                   <p class="text-gray-600 text-sm font-medium">{{popular.description}}</p>
                   <div class="flex justify-between items-center">
                     <div class="flex" v-if="popular.rating">

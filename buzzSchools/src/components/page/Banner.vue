@@ -8,7 +8,7 @@
               <h1 class="text-4xl text-white font-extrabold font-signika">Get Online Courses from Experienced And Experts</h1>
               <p class="text-lg font-medium leading-snug text-purple-100 ">We are providing high-quality online courses to inprove your skills. Our all instructor are highly experienced and experts.</p>
               <div class="flex space-x-3">
-                  <a href="" class="bg-orange-600 font-bold text-white px-5 rounded-md py-3 hover:bg-orange-800 hover:text-white">Find Courses</a>
+                  <router-link :to="{name: 'AllCourses'}" class="bg-orange-600 font-bold text-white px-5 rounded-md py-3 hover:bg-orange-800 hover:text-white">Find Courses</router-link>
                   <a href="" class="bg-white font-bold text-orange-700 rounded-md px-5 py-3 hover:bg-orange-800 hover:text-white">Explore More</a>
               </div>
           </div>
