@@ -12,6 +12,7 @@ import CourseCategory from '../views/courses/CourseCategory.vue'
 import SingleCourseView from '../views/courses/SingleCourseView.vue'
 import Webinars from '../views/webinars/Webinars.vue'
 import NotFound from '../views/NotFound.vue'
+import SingleCourseCategory from '../views/courses/SingleCourseCategory.vue'
 
 
 const routes = [
@@ -30,6 +31,7 @@ const routes = [
             {path: '/courses', name: 'AllCourses', component: AllCourses},
             {path: '/course-categories', name: 'CourseCategory', component: CourseCategory},
             { path: '/single-course', props: route => ({query: route.query.title}), name: 'SingleCourseView', component: SingleCourseView },
+            { path: '/single-course-category', props: route => ({query: route.query.category}), name: 'SingleCourseCategory', component: SingleCourseCategory },
             {path: '/webinars', name: 'Webinars', component: Webinars},
         ],
     },

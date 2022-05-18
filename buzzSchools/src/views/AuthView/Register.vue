@@ -79,7 +79,7 @@
 <script setup>
 import {ref} from 'vue'
 import {useTitle} from '@vueuse/core'
-const title = useTitle('GoCommerce', { titleTemplate: '%s | Register' });
+const title = useTitle('buzzschool', { titleTemplate: '%s | Register' });
 
 
 const formShouldShow = ref(false);

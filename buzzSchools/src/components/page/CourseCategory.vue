@@ -4,7 +4,7 @@
       <p class="text-4xl font-signika font-extrabold text-center">Popular Category</p>
       <div class="mt-6">
           <div class="grid grid-cols-4 gap-3">
-              <div v-for="category in CourseCategories" :key="category.id">
+              <router-link :to="{name: 'SingleCourseCategory', query: {category: category.title} }" v-for="category in CourseCategories" :key="category.id">
                   <a href="#" class="bg-white items-center space-x-1 drop-shadow-md p-3 flex">
                       <div class="text-orange-600">
                       <!-- <img :src="category.icon" alt=""> -->
@@ -16,7 +16,7 @@
                   </div>
                   </a>
                   
-              </div>
+              </router-link>
           </div>
           <div class="mt-4 flex justify-center">
           <router-link :to="{name: 'CourseCategory'}" class="text-center font-bold bg-orange-500 text-white px-6 py-2 rounded-lg">View All course categories</router-link>

@@ -36,9 +36,9 @@
           <h1 class="text-gray-700 uppercase my-2 font-bold font-signika text-sm">My Account</h1>
           <div>
             <ul>
-              <li><a href="#">Login</a></li>
-              <li><a href="#">Sign Up</a></li>
-              <li><a href="#">My cart</a></li>
+              <li><router-link :to="{name: 'Login'}">Login</router-link></li>
+              <li><router-link :to="{name: 'Register'}">Sign Up</router-link></li>
+              <li><router-link :to="{name: 'Login'}">My cart</router-link></li>
             </ul>
           </div>
         </div>

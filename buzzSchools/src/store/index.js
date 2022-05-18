@@ -55,8 +55,8 @@ const courseCategories = [
 const popularCourses = [
     {
         id: 1,
-        title: 'Nutrition: Build perfect diet and meal plan',
-        description: 'lorem ipsum dolar sita me elave abiento canievala...',
+        title: 'How to build a professional CV',
+        description: 'Learn how to develope a professional CV.',
         amount: 15.00,
         normalAmount: 24.00,
         curency: 'USD',
@@ -70,7 +70,7 @@ const popularCourses = [
     {
         id: 2,
         title: 'PHP beginner: Become a PHP master',
-        description: 'lorem ipsum dolar sita me elave abiento canievala...',
+        description: 'Learn php fundamentals and understand how to work with php.',
         amount: 'free',
         normalAmount: 24.00,
         curency: 'USD',
@@ -83,8 +83,8 @@ const popularCourses = [
     },
     {
         id: 3,
-        title: 'Nutrition: Build perfect diet and meal plan',
-        description: 'lorem ipsum dolar sita me elave abiento canievala...',
+        title: 'Vue 3 composition api',
+        description: 'Learn about vue js application and how to create your website with vue js.',
         amount: 20,
         normalAmount: 8.00,
         curency: 'USD',
@@ -98,7 +98,7 @@ const popularCourses = [
     {
         id: 4,
         title: 'Nutrition: Build perfect diet and meal plan',
-        description: 'lorem ipsum dolar sita me elave abiento canievala...',
+        description: 'Learn about the best perfect diet and how to build a perfect diet and meal.',
         amount: 30,
         normalAmount: 16.00,
         curency: 'USD',
@@ -112,7 +112,7 @@ const popularCourses = [
     {
         id: 5,
         title: 'The creator of maniscrest',
-        description: 'lorem ipsum dolar sita me elave abiento canievala...',
+        description: 'Learn about the creator of manicrest for some main purpose.',
         amount: 45.00,
         normalAmount: 50.00,
         curency: 'USD',
@@ -126,7 +126,7 @@ const popularCourses = [
     {
         id: 6,
         title: 'How to grow your businness in 2022',
-        description: 'lorem ipsum dolar sita me elave abiento canievala...',
+        description: 'Learn how to grow your businness in 2022, and understand the fundametals of how businness works.',
         amount: 15.00,
         normalAmount: 43.00,
         curency: 'USD',
