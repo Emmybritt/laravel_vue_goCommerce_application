@@ -3,7 +3,10 @@
 </script>
 
 <template>
+<div class="font-source">
   <router-view></router-view>
+</div>
+  
 </template>
 
 <style>

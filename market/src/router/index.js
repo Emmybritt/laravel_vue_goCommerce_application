@@ -1,7 +1,18 @@
 import {createRouter, createWebHistory} from 'vue-router'
 import store from '../store'
+import PageLayout from '../layouts/PageLayout.vue'
+import Home from '../views/Home.vue'
 
-const routes = [];
+const routes = [
+    {
+        path: '/',
+        name: 'PageLayout',
+        component: PageLayout,
+        children: [
+            {path: '/', name: 'Home', component: Home}
+        ],
+    }
+];
 
 const router = createRouter({
     history: createWebHistory(),
