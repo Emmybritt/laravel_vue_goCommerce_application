@@ -2,6 +2,7 @@ import {createRouter, createWebHistory} from 'vue-router'
 import store from '../store'
 import PageLayout from '../layouts/PageLayout.vue'
 import Home from '../views/Home.vue'
+import SingleProductView from '../views/SingleProductView.vue'
 
 const routes = [
     {
@@ -9,7 +10,9 @@ const routes = [
         name: 'PageLayout',
         component: PageLayout,
         children: [
-            {path: '/', name: 'Home', component: Home}
+            {path: '/', name: 'Home', component: Home},
+            { path: '/item', props: route => ({query: route.query.item}), name: 'SingleProductView', component: SingleProductView },
+            // {path: '/:title', name: 'Home', component: Home},
         ],
     }
 ];

@@ -1,40 +1,164 @@
 import {createStore} from 'vuex'
 import axiosClient from '../axios'
+import { v4 as uuidv4 } from 'uuid';
 
-const sidbarLinks = [
+const cartItem = [
     {
-        title: 'Dashboard',
-        icon: 'dashboard',
-        path: {name: 'Dashboard'} 
+        id:uuidv4(),
+        title: 'Cheap Wholesale top quality second hand shoe',
+        thumbnail: 'clothpieces.jpg',
+        images: [
+            {image: 'image here'}
+        ],
+        price: 34589.00,
+        mainPrice: 248573,
+        details: '20 Pieces (Min. Order)',
+        description: 'This is the description',
+        new: true,
     },
     {
-        title: 'User Management',
-        icon: 'person',
-        path: {name: 'UserManagement'},
-        gate: 'user_management_access',
-        children: [
-            {
-                title: 'Permission',
-                icon: 'perm_data_setting',
-                path: {name: 'Permission'},
-                gate: 'permission_access',
-            },
-            {
-                title: 'Roles',
-                icon: 'group',
-                path: {name: 'Roles'},
-                gate: 'role_access',
-
-            },
-            {
-                title: 'Users',
-                icon: 'users',
-                path: {name: 'Users'},
-                gate: 'user_access',
-
-            }
+        id:uuidv4(),
+        title: 'Cheap Wholesale top quality second hand shoe',
+        thumbnail: 'cookware.jpg',
+        images: [
+            {image: 'image here'}
         ],
-    }
+        price: 445.00,
+        mainPrice: 608573,
+        details: '15 Pieces (Min. Order)',
+        description: 'This is the description',
+        new: false,
+    },
+    {
+        id:uuidv4(),
+        title: 'Cheap Wholesale top quality second hand shoe',
+        thumbnail: 'fashioncloth.jpg',
+        images: [
+            {image: 'image here'}
+        ],
+        price: 2345.00,
+        mainPrice: 48573,
+        details: '8 Pieces (Max. Order)',
+        description: 'This is the description',
+        new: false,
+    },
+    {
+        id:uuidv4(),
+        title: 'Cheap Wholesale top quality second hand shoe',
+        thumbnail: 'girlsskirt.jpg',
+        images: [
+            {image: 'image here'}
+        ],
+        price: 1345.00,
+        mainPrice: 9803,
+        details: '20 Pieces (Min. Order)',
+        description: 'This is the description',
+        new: true,
+    },
+    {
+        id:uuidv4(),
+        title: 'Cheap Wholesale top quality second hand shoe',
+        thumbnail: 'heartshape.jpg',
+        images: [
+            {image: 'image here'}
+        ],
+        price: 4345.00,
+        mainPrice: 448573,
+        details: '1000 Kilograms (Min.',
+        description: 'This is the description',
+        new: true,
+    },
+    {
+        id:uuidv4(),
+        title: 'Cheap Wholesale top quality second hand shoe',
+        thumbnail: 'hotpot.jpg',
+        images: [
+            {image: 'image here'}
+        ],
+        price: 45.00,
+        mainPrice: 48573,
+        details: '1 Piece (Min. Order)',
+        description: 'This is the description',
+        new: false,
+    },
+    {
+        id:uuidv4(),
+        title: 'Cheap Wholesale top quality second hand shoe',
+        thumbnail: 'machine.jpg',
+        images: [
+            {image: 'image here'}
+        ],
+        price: 1345.00,
+        mainPrice: 8573,
+        details: '10000.0 Kilograms (Min.',
+        description: 'This is the description',
+        new: false,
+    },
+    {
+        id:uuidv4(),
+        title: 'Cheap Wholesale top quality second hand shoe',
+        thumbnail: 'mixedcloth.jpg',
+        images: [
+            {image: 'image here'}
+        ],
+        price: 1345.00,
+        mainPrice: 8573,
+        details: '10000.0 Kilograms (Min.',
+        description: 'This is the description',
+        new: true,
+    },
+    {
+        id:uuidv4(),
+        title: 'Cheap Wholesale top quality second hand shoe',
+        thumbnail: 'shoe.jpg',
+        images: [
+            {image: 'image here'}
+        ],
+        price: 1345.00,
+        mainPrice: 8573,
+        details: '10000.0 Kilograms (Min.',
+        description: 'This is the description',
+        new: false,
+    },
+    {
+        id:uuidv4(),
+        title: 'Cheap Wholesale top quality second hand shoe',
+        thumbnail: 'spoon.jpg',
+        images: [
+            {image: 'image here'}
+        ],
+        price: 1345.00,
+        mainPrice: 8573,
+        details: '10000.0 Kilograms (Min.',
+        description: 'This is the description',
+        new: true,
+    },
+    {
+        id:uuidv4(),
+        title: 'Cheap Wholesale top quality second hand shoe',
+        thumbnail: 'trouser.jpg',
+        images: [
+            {image: 'image here'}
+        ],
+        price: 1345.00,
+        mainPrice: 8573,
+        details: '10000.0 Kilograms (Min.',
+        description: 'This is the description',
+        new: false,
+    },
+    {
+        id:uuidv4(),
+        title: 'Cheap Wholesale top quality second hand shoe',
+        thumbnail: 'clothpieces.jpg',
+        images: [
+            {image: 'image here'}
+        ],
+        price: 1345.00,
+        mainPrice: 8573,
+        details: '10000.0 Kilograms (Min.',
+        description: 'This is the description',
+        new: true,
+    },
 ];
 const store = createStore({
     state: {
@@ -43,7 +167,7 @@ const store = createStore({
             token: localStorage.getItem("TOKEN"),
             type: null,
         },
-        sideBar: {...sidbarLinks}
+        cartData: [...cartItem],
     },
     getters: {},
     actions: {},
