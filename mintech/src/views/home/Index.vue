@@ -8,7 +8,7 @@
             <p class="text-sm mt-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur temporibus rem, blanditiis quasi culpa itaque dignissimos
                maxime minus odio perspiciatis obcaecati earum, ut sit repellat quaerat animi harum laudantium corporis?</p>
                <div class=" mt-4 ">
-                <a href="" class="bg-blue-900 px-[3rem] py-2 rounded-full text-white text-sm">Ask For Consultation <span class=""></span></a>
+                <a href="" class="bg-blue-900 px-[3rem] py-[1rem] rounded-full text-white text-sm">Ask For Consultation <span class=""></span></a>
                </div>
         </div>
       </div>

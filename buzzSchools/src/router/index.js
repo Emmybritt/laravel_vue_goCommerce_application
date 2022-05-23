@@ -13,6 +13,7 @@ import SingleCourseView from '../views/courses/SingleCourseView.vue'
 import Webinars from '../views/webinars/Webinars.vue'
 import NotFound from '../views/NotFound.vue'
 import SingleCourseCategory from '../views/courses/SingleCourseCategory.vue'
+import TextHelper from '../views/texthelper/Home.vue'
 
 
 const routes = [
@@ -44,7 +45,8 @@ const routes = [
             {path: '/register', name: 'Register', component: Register},
             {path: '/forgot-password', name: 'ForgotPassword', component: ForgotPassword},
         ],
-    }
+    },
+    {path: '/test-helper', name: 'TextHelper', component: TextHelper}
 ];
 
 const router = createRouter({
