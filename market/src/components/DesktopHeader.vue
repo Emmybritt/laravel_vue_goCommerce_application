@@ -2,7 +2,7 @@
     <div class="font-source shadow-md">
         <div class="bg-white flex items-center border-b px-6 py-4">
             <div class="w-1/4">
-                <h1 class="text-lg font-bold">GoCommerce Logo</h1>
+                <router-link :to="{name: 'Home'}" class="text-lg font-bold">GoCommerce Logo</router-link>
             </div>
             <div class="w-2/4">
                 <div class="flex rounded-full border-2 border-purple-600 mx-3 text-gray-600 pl-3">
@@ -57,7 +57,7 @@
                     </div>
                     <div class="relative">
                         <div class="flex items-center">
-                            <span class="las la-envelope text-2xl"></span>
+                            <span class="las la-envelope text-xl"></span>
                             <span>Messages</span>
                         </div>
                         <div class="bg-white w-[20rem] hidden right-0 top-[3rem] p-3 py-[1rem] rounded-md absolute shadow-purple-400 shadow-md">
@@ -75,17 +75,20 @@
                         </div>
                     </div>
                     <div class="relative">
-                        <div class="flex items-center">
-                            <span class="las la-shopping-cart text-2xl"></span>
-                            <span>Carts</span>
+                        <router-link :to="{name: 'Cart'}" class="group">
+                        <div class="flex items-center relative">
+                            <span class="las group-hover:text-orange-500 la-shopping-cart text-xl"></span>
+                            <span class="group-hover:text-orange-500">Carts</span>
+                            <div class="absolute bg-orange-500 rounded-full text-xs text-white px-1 -top-2 font-bold left-2">0</div>
                         </div>
+                        </router-link>
                     </div>
-                    <div class="relative">
+                    <div class="relative group">
                         <div class="flex items-center">
-                            <span class="las la-gift text-2xl"></span>
+                            <span class="las la-gift text-xl"></span>
                             <span>Orders</span>
                         </div>
-                        <div class="bg-white w-[20rem] hidden right-0 top-[3rem] p-3 py-[1rem] rounded-md absolute shadow-purple-400 shadow-md">
+                        <div class="bg-white hidden group-hover:block z-40 w-[20rem] right-0 top-[3rem] p-3 py-[1rem] rounded-md absolute shadow-purple-400 shadow-md">
                             <h1 class="text-gray-600">You have not logged in!!!. <a href="" class="text-orange-500">Please Login</a></h1>
                         </div>
                     </div>
@@ -99,6 +102,7 @@
 <script setup>
 import vSelect from 'vue-select'
 import BottomNavigation from './BottomNavigation.vue'
+
 
 </script>
 
