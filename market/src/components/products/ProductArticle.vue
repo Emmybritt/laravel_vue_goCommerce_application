@@ -14,16 +14,55 @@ Portable & Long Battery Life : The integrated 2000 mAh battery charging box is p
                   </div>
           </div>
           <div class="flex flex-col relative space-y-2 w-[25%] flex-auto">
-              <div class="bg-white shadow-md px-4 flex py-2">
-                  <span class="text-sm">
+              <div class="bg-white divide-y shadow-md flex flex-col py-2">
+                  <div class="flex items-center space-x-2 px-3 py-2">
+                    <i class="las la-list text-lg"></i>
+                    <span class="text-sm">
                       Products Specification
-                  </span>
+                    </span>
+                  </div>
+                  <div class="flex px-3 py-2 space-x-2 ">
+                    <i class="las la-poll-h text-lg"></i>
+                    <span class="text-sm">
+                      Products Details
+                    </span>
+                  </div>
+                  <div class="flex px-3 space-x-2  py-2">
+                    <i class="lar la-comment text-lg"></i>
+                    <span class="text-sm">
+                      Verified Customer feedback
+                    </span>
+                  </div>
+                  
               </div>
-              <div class="bg-white shadow-md">
-                  Second
+              <div class="bg-white shadow-md px-2 py-2">
+                  <div class="flex">
+                      <div class="flex">
+                          <div class="w-1/3">
+                              <img src="../../assets/cartimages/videogame.png" class="h-[3.4rem] object-contain w-[3.4rem]" alt="">
+                          </div>
+                          <div class="py-3">
+                              <h1 class="text-sm">RKINC True Wireless Earbu...</h1>
+                              <p>₦ 5,999</p>
+                              <div class="flex items-center space-x-2">
+                                  <span class="text-xs"><del>₦ 10,832</del></span>
+                                  <span class="text-xs bg-purple-100 text-purple-600 px-2 ">45%</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="flex items-center justify-center space-x-2 py-2 px-3 rounded shadow-md bg-purple-600 text-white ">
+                    <i class="las la-cart-plus text-2xl"></i>
+                    <span>Add To Cart</span>
+                      
+                  </div>
               </div>
-              <div class="bg-white shadow-md">
-                  Third
+              <div class="bg-white shadow-md px-6 py-3">
+                  <h1>Questions about this product?</h1>
+                  <div class="flex justify-center py-4 items-center space-x-1 text-purple-600">
+                      <i class="lab la-rocketchat text-3xl"></i>
+                      <span class="uppercase font-bold font-signika">Chat</span>
+                  </div>
               </div>
           </div>
       </div>
