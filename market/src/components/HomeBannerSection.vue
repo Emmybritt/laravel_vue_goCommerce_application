@@ -112,7 +112,7 @@
                             <div class="px-1 py-1 bg-gray-100 rounded-full">
                                 <img src="../assets/categories/vehiclepart.png" class="h-[1.2rem] object-cover w-[1.2rem] rounded-full" alt="">
                             </div>
-                            <p class="pl-1 text-sm">Vehicle Part & Accessories</p>
+                            <router-link :to="{name: 'ProductCategories', params: {category: 'vehicle part'} }" class="pl-1 text-sm">Vehicle Part & Accessories</router-link>
                         </div>
                         <span class="las la-angle-right text-sm"></span>
                     </div>
