@@ -8,6 +8,7 @@ import AllProductsCategories from '../views/AllProductsCategories.vue'
 import Pricing from '../views/Pricing.vue'
 import AllCategories from '../views/AllCategories.vue'
 import ProfileView from '../views/ProfileView.vue'
+import Cart from '../views/Cart.vue'
 
 
 const routes = [
@@ -17,6 +18,7 @@ const routes = [
         component: PageLayout,
         children: [
             {path: '/', name: 'Index', component: Index},
+            {path: '/cart', name: 'Cart', component: Cart},
             {path: 'profile', props: route => ({query: route.query.user}), name: 'ProfileView', component: ProfileView},
             {path: '/pricing', name: 'Pricing', component: Pricing},
             {path: '/categories', name: 'AllCategories', component: AllCategories},

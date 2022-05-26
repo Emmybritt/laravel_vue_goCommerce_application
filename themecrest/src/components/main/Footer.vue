@@ -45,7 +45,7 @@
             </div>
             <div class="lg:col-span-2 lg:mt-0 mt-7">
               <h1 class="uppercase mb-3 text-sm font-bold">Subscribe to our newsletters</h1>
-              <p class="text-xs ml-3">signup for our newsletter and we'll email you every time we release a new set and latest items.</p>
+              <p class="text-sm leading-tight font-signika capitalize">signup for our newsletter and we'll email you every time we release a new set and latest items.</p>
               <div class="md:flex mt-6">
                 <input type="text" placeholder="enter email address" class="text-sm text-slate-700 px-3 py-2 focus:outline-none w-full border-none">
                 <button class="text-white bg-gradient-to-tr from bg-slate-800 via-indigo-700 to-slate-800 p-2 rounded-r-lg w-full">Subscribe</button>

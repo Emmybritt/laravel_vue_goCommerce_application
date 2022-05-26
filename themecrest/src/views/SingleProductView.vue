@@ -62,6 +62,10 @@
                                     <p>January 19 2021</p>
                                 </div>
                                 <div class="flex py-2 items-center justify-between">
+                                    <h1 class="font-bold font-signika">Designed by</h1>
+                                    <router-link :to="{name: 'ProfileView', query:{user: 'Emmy-britt'} }">Emmy britt</router-link>
+                                </div>
+                                <div class="flex py-2 items-center justify-between">
                                     <h1 class="font-bold font-signika">Released</h1>
                                     <p>January 19 2021</p>
                                 </div>
