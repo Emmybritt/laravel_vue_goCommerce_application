@@ -1,6 +1,7 @@
 import {createRouter, createWebHistory} from 'vue-router'
 import store from '../store'
 import Home from '../views/Home.vue'
+import Jobs from '../views/Jobs.vue'
 import PageLayout from '../Layouts/PageLayout.vue'
 
 
@@ -10,7 +11,8 @@ const routes = [
         name: 'PageLayout',
         component: PageLayout,
         children: [
-            {path: '/', name: 'Home', component: Home}
+            {path: '/', name: 'Home', component: Home},
+            {path: '/jobs', name: 'Jobs', component: Jobs},
         ]
     }
 ];

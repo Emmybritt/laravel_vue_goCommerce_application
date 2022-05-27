@@ -7,6 +7,7 @@
         <LatestJobPost />
         <CompanyDesc />
         <NewsLetterSubscirption />
+        <LatestBlog />
       </div>
   </div>
 </template>
@@ -18,6 +19,7 @@ import JobsCategories from '../components/pages/JobsCategories.vue'
 import LatestJobPost from '../components/pages/LatestJobPost.vue'
 import CompanyDesc from '../components/pages/CompanyDesc.vue'
 import NewsLetterSubscirption from '../components/pages/NewsLetterSubscirption.vue'
+import LatestBlog from '../components/pages/LatestBlog.vue'
 
 
 </script>

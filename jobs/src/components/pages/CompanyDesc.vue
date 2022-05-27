@@ -8,7 +8,9 @@
            voluptatum error ea possimus quia suscipit eligendi architecto, iure aut culpa! Corporis.</p>
       </div>
         <div class="grid grid-cols-2">
-
+          <div>
+            
+          </div>
         </div>
       </div>
     </div>
