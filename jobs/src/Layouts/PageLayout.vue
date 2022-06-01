@@ -1,6 +1,6 @@
 <template>
   <div>
-  <div class="sticky top-0">
+  <div class="sticky z-50 top-0">
     <Header />
   </div> 
       <router-view></router-view>

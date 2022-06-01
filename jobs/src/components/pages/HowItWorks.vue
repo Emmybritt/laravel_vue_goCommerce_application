@@ -16,7 +16,7 @@
                 <h1 class="font-bold spa">Register Account</h1>
                 <p class="text-xs text-gray-500 py-3">First you will need to register an account</p>
             </div>
-            <router-link :to="{name: 'Home'}" class="text-purple-600 font-bold capitalize text-sm">Register an account</router-link>
+            <router-link :to="{name: 'Register'}" class="text-purple-600 font-bold capitalize text-sm">Register an account</router-link>
         </div>
         <div class="flex flex-col px-[2rem] border rounded-lg py-[1rem] bg-white shadow-md ">
             <h1 class="text-green-500 font-signika font-semibold text-5xl">2</h1>
@@ -24,7 +24,7 @@
                 <h1 class="font-bold spa2">Create Resume</h1>
                 <p class="text-xs text-gray-500 py-3">Secondly, You will need to create a resume to apply for any jobs.</p>
             </div>
-            <router-link :to="{name: 'Home'}" class="text-green-500 font-bold capitalize text-sm">Create your resume</router-link>
+            <router-link :to="{name: 'CreateResume'}" class="text-green-500 font-bold capitalize text-sm">Create your resume</router-link>
         </div>
         <div class="flex flex-col px-[2rem] border rounded-lg py-[1rem] bg-white shadow-md ">
             <h1 class="text-pink-500 font-signika font-semibold text-5xl">3</h1>
@@ -32,7 +32,7 @@
                 <h1 class="font-bold spa3">Find Jobs</h1>
                 <p class="text-xs text-gray-500 py-3">Then Search for an appropriate job of your kind</p>
             </div>
-            <router-link :to="{name: 'Home'}" class="text-pink-500 font-bold capitalize text-sm">Search now</router-link>
+            <router-link :to="{name: 'Jobs'}" class="text-pink-500 font-bold capitalize text-sm">Search now</router-link>
         </div>
         <div class="flex flex-col px-[2rem] border rounded-lg py-[1rem] bg-white shadow-md ">
             <h1 class="text-blue-500 font-signika font-semibold text-5xl">4</h1>
@@ -40,7 +40,7 @@
                 <h1 class="font-bold spa4">Apply For Jobs</h1>
                 <p class="text-xs text-gray-500 py-3">apply to the company and wait. You will be notified through your email.</p>
             </div>
-            <router-link :to="{name: 'Home'}" class="text-blue-500 font-bold capitalize text-sm">Appy Now</router-link>
+            <router-link :to="{name: 'Home'}" class="text-blue-500 font-bold capitalize text-sm">Apply Now</router-link>
         </div>
     </div>
     </div>

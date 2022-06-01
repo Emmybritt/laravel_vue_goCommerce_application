@@ -44,7 +44,7 @@
               </a>
           </div>
           <div class="flex items-center justify-center">
-              <router-link :to="{name: 'Jobs'}" class="bg-purple-600 text-white px-6 py-2 shadow-md shadow-purple-300 rounded-md font-bold font-signika">View More Jobs</router-link>
+              <router-link :to="{name: 'Jobs'}" class="bg-purple-600 text-white px-6 py-2 shadow-md shadow-purple-300 rounded-md font-bold font-signika">Find More Jobs</router-link>
           </div>
       </div>
   </div>

@@ -8,7 +8,7 @@
             quia eaque magnam ipsa ex ullam, neque, animi ut ad non aliquid voluptatum? Dicta 
             voluptatibus odit natus impedit.</p>
             <div class="mt-4">
-                <a href="" class="bg-slate-800 rounded-lg text-sm text-white shadow-md shadow-blue-300 font-bold px-[2rem] py-2">Find A Job</a>
+                <router-link :to="{name: 'Jobs'}" class="bg-slate-800 rounded-lg text-sm text-white shadow-md shadow-blue-300 font-bold px-[2rem] py-2">Find A Job</router-link>
             </div>
       </div>
       <div class="w-1/2">
