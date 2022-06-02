@@ -8,13 +8,13 @@
               <span v-else class="las la-times text-2xl"></span>
           </button>
           </div>
-          <div class="space-x-4 hidden sm:block flex-auto capitalize w-[70%] text-gray-300">
-              <span><a href="" class="text-[#B225CE]">home</a></span>
-              <span><a href="" class="capitalize">explore</a></span>
-              <span><a href="">marketplace</a></span>
-              <span><a href="">news</a></span>
-              <span><a href="">games</a></span>
-              <span><a href="">login</a></span>
+          <div class="space-x-4 font-bold text-lg hidden sm:block flex-auto w-[70%] text-gray-300">
+              <span><a href="" class="text-[#B225CE] capitalize hover:text-[#B225CE]">home</a></span>
+              <span><a href="" class="hover:text-[#B225CE] capitalize">Explore</a></span>
+              <span><a href="" class="hover:text-[#B225CE] capitalize">Marketplace</a></span>
+              <span><a href="" class="hover:text-[#B225CE] capitalize">News</a></span>
+              <span><a href="" class="hover:text-[#B225CE] capitalize">Register</a></span>
+              <span><a href="" class="hover:text-[#B225CE] capitalize">login</a></span>
           </div>
           <div class="flex-auto hidden sm:block">
               <div class="flex space-x-3 items-center">

@@ -4,7 +4,8 @@
       <div class="block">
         <FavouriteArt />
       </div>
-      <FeaturedNfts />
+      <FeaturedNfts :nftDatas="nftDatas"/>
+      <NftTutorDesc />
   </div>
 </template>
 
@@ -12,6 +13,8 @@
 import Banner from '../components/home/Banner.vue'
 import FavouriteArt from '../components/home/FavouriteArt.vue'
 import FeaturedNfts from '../components/home/FeaturedNfts.vue'
+import NftTutorDesc from '../components/home/NftTutorDesc.vue'
+import { nftDatas } from "../datas/nftDatas";
 
 
 </script>

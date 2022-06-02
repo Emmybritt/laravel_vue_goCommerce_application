@@ -1,11 +1,11 @@
 <template>
   <div class="md:px-[4rem] ">
-      <div class="px-[2rem] flex md:items-center md:space-x-4 flex-col md:flex-row">
+      <div class="px-[2rem] mx-auto flex md:items-center md:space-x-4  flex-col md:flex-row">
           <div class="md:w-1/2">
-              <h1 class="text-3xl max-w-lg uppercase text-slate-300 font-signika font-bold text-center py-6 md:text-left">Choose your favourite art, if you want!</h1>
+              <h1 class="text-3xl mx-auto max-w-lg uppercase text-slate-300 font-signika font-bold text-center py-6 md:text-left">Choose your favourite art, if you want!</h1>
           </div>
           <div class="md:w-1/2">
-              <p class="max-w-lg text-slate-400 font-medium leading-tight text-center md:text-left">Begin with the simplest and most secure stage to 
+              <p class="max-w-lg mx-auto text-slate-400 font-medium leading-tight text-center md:text-left">Begin with the simplest and most secure stage to 
                   purchase and exchange advance workmanship and NFT's</p>
           </div>
       </div>
@@ -13,11 +13,11 @@
         <div class="md:w-[50%]">
         <div class="bg-gradient-to-r from-[#7928ca] rounded-md to-[#ff0080] p-[1px]">
             <div class="bg-[#000316] rounded-md">
-            <div class="glass rounded-md flex md:flex-row flex-col">
-                <div class="md:w-[50%] p-2">
+            <div class="glass rounded-md flex lg:flex-row flex-col">
+                <div class="lg:w-[50%] p-2">
                     <img src="../../assets/nftimages/female.jpeg" class="w-full rounded-md" alt="">
                 </div>
-                <div class="flex flex-col justify-center md:w-[50%] px-6">
+                <div class="flex flex-col justify-center lg:w-[50%] px-6">
                     <div class="py-4 flex items-center space-x-1">
                         <span class="las la-dice-d20 text-pink-500"></span>
                         <h1 class="text-gray-500 text-sm font-semibold tracking-wider">Metacluber #5138</h1>

@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens:{
+        'xs': '322px'
+      },
       keyframes: {
         'fade-in-down': {
           "from": {
