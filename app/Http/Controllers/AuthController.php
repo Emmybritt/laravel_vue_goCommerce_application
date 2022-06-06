@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rules\Password;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
 
@@ -17,9 +18,10 @@ class AuthController extends Controller
         $data = $request->validate([
             'name' => 'required|string',
             'email' => 'required|email|unique:users,email',
+            'user_type' => 'required|string',
             'phone_number' => 'required|numeric',
-            'status' => 'required|string',
-            'address' => 'required|string',
+            'status' => 'string',
+            'address' => '',
             'password' => [
                 'required',
                 'confirmed',
@@ -30,6 +32,7 @@ class AuthController extends Controller
         $user = User::create([
             'name' => $data['name'],
             'slug' => Str::slug($data['name']),
+            'user_type' => $data['user_type'],
             'email' => $data['email'],
             'phone_number' => $data['phone_number'],
             'status' => $data['status'],
@@ -37,9 +40,15 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
         
+        $token = $user->createToken('main')->plainTextToken;
 
-        event(new Registered($user));
-        return response('registeration successfull', 200);
+        return response([
+            'user' => $user,
+            'token' => $token
+        ]);
+
+        // event(new Registered($user));
+        // return response('registeration successfull', 200);
     }
 
     public function resendemailverificationlink (Request $request)
@@ -57,11 +66,7 @@ class AuthController extends Controller
     }
 
     public function login(Request $request) {
-        $user = $request->user();
-        if ($user->status == 'disabled') {
-            abort(403, 'Account Disabled');
-        }
-        
+                
         $credentials = $request->validate([
             'email' => 'required|email|exists:users,email',
             'password' => 'required',

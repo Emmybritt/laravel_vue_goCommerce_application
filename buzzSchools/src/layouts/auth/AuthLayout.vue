@@ -1,6 +1,8 @@
 <template>
   <div>
-      <Header @ShowSearchModal="ShowModal" />
+      <div class="sticky top-0 z-50">
+        <Header @ShowSearchModal="ShowModal" />
+      </div>
       <router-view></router-view>
       <Footer />
   </div>

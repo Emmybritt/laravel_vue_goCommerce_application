@@ -14,6 +14,8 @@ import Webinars from '../views/webinars/Webinars.vue'
 import NotFound from '../views/NotFound.vue'
 import SingleCourseCategory from '../views/courses/SingleCourseCategory.vue'
 import TextHelper from '../views/texthelper/Home.vue'
+import DashboardLayout from '../layouts/dashboard/DashboardLayout.vue'
+import Main from '../views/dashboard/Main.vue'
 
 
 const routes = [
@@ -37,9 +39,20 @@ const routes = [
         ],
     },
     {
-        path: '/login',
+        path: '/dashboard',
+        redirect: "Dashboard",
+        name: 'DashboardLayout',
+        component: DashboardLayout,
+        meta: {requiresAuth: true},
+        children: [
+            {path: '/dashboard', name: 'Dashboard', component: Main}
+        ]
+    },
+    {
+        path: '/auth',
         name: 'AuthLayout',
         component: AuthLayout,
+        meta: {isGuest: true},
         children: [
             {path: '/login', name: 'Login', component: Login},
             {path: '/register', name: 'Register', component: Register},
@@ -55,10 +68,10 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-    if (to.meta.requiresAuth && !store.sate.user.token) {
-        next({name: 'Login'});
+    if (to.meta.requiresAuth && !store.state.user.token) {
+        next({name: "Login"});
     }else if(store.state.user.token && to.meta.isGuest){
-        next({name: 'Dashboard'});
+        next({name: "Dashboard"});
     }else{
         next();
     }

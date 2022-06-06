@@ -11,11 +11,10 @@
                       via-[#5732C4] 
                       to-[#132394] 
                       text-white
-                      text-sm 
-                      font-bold px-4 py-1">Explore More</div>
+                      font-bold px-4 py-3">Explore More</div>
               </a>
               <a href="">
-                  <div class="bg-gradient-to-r font-bold px-4 text-white py-1">Play money game</div>
+                  <div class="bg-gradient-to-r font-bold  px-4 py-3 text-white">Create NFT</div>
               </a>
           </div>
           <div class="flex space-x-4 mt-[2rem] text-white font-signika items-center">

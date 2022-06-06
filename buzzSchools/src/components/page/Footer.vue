@@ -1,7 +1,7 @@
 <template>
 <div>
-  <div class="bg-purple-50 py-[2rem] px-[6rem] font-source">
-      <div class="grid grid-cols-5 gap-3">
+  <div class="bg-purple-50 py-[2rem] px-[1rem] lg:px-[6rem] font-source">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
         <div>
             <h1 class="text-gray-700 uppercase font-bold font-signika text-sm my-2">About US</h1>
             <div class="text-xs">
@@ -13,11 +13,12 @@
           <h1 class="text-gray-700 uppercase font-bold font-signika text-sm my-2">QuickLinks</h1>
           <div>
             <ul>
-              <li><a href="#">GoCommerce market</a></li>
+              <li><a href="#">GoCommerce market place</a></li>
               <li><a href="#">NFT market</a></li>
-              <li><a href="#">GoCommerce market</a></li>
+              <li><a href="#">Become an affiliate</a></li>
               <li><a href="#">Mintect solutions</a></li>
               <li><a href="#">Jobs</a></li>
+              <li><a href="#">Sell your Courses</a></li>
             </ul>
           </div>
         </div>
@@ -68,8 +69,8 @@
         </div>
       </div>
       <div>
-        <div class="mt-3">
-          <div class="flex">
+        <div class="mt-3 ml-4">
+          <div class="flex md:flex-row flex-col">
             <div>
               <h1 class="uppercase text-sm text-gray-700 font-bold">Download The App</h1>
               <p class="text-xs">Get access to all exclusive offers. discounts and deals by downloading</p>

@@ -18,7 +18,7 @@
             <div class="flex justify-center my-2">
                 <span class="las la-wallet text-5xl"></span>
             </div>
-            <h1 class="text-xl pb-4 font-bold font-signika text-center">ow Create your collection</h1>
+            <h1 class="text-xl pb-4 font-bold font-signika text-center">Create your collection</h1>
             <div class="text-center text-slate-400">
                 Click <a href="" class="font-bold text-pink-500 text-lg">my collections</a> and then set up your collection. 
                 Add social links, a description, profile & banner images, and set a secondary sales fee.
@@ -26,7 +26,7 @@
         </div>
         <div class="text-white">
             <div class="flex justify-center my-2">
-                <span class="las la-wallet text-5xl"></span>
+                <span class="lar la-image text-5xl"></span>
             </div>
             <h1 class="text-xl pb-4 font-bold font-signika text-center">Add your NFTs</h1>
             <div class="text-center text-slate-400">
@@ -36,12 +36,11 @@
         </div>
         <div class="text-white">
             <div class="flex justify-center my-2">
-                <span class="las la-wallet text-5xl"></span>
+                <span class="las la-tag text-5xl"></span>
             </div>
-            <h1 class="text-xl pb-4 font-bold font-signika text-center">Create your collection</h1>
+            <h1 class="text-xl pb-4 font-bold font-signika text-center">List items for sales</h1>
             <div class="text-center text-slate-400">
-                Click my collections and then set up your collection. 
-                Add social links, a description, profile & banner images, and set a secondary sales fee.
+                Choose between auctions, fixed-price listings, and declining-price listings. You choose how you want to sell your NFTs, and help you sell Them
             </div>
         </div>
     </div>

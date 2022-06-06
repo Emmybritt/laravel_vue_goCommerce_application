@@ -2,19 +2,18 @@
   <div class="text-white">
       <div class="flex sm:px-[4rem]  items-center px-[1rem] py-[1rem]" :class="[scrollPosition > 100 || shouldShow ? 'glass animate-fade-in-down' : '']">
           <div class="md:w-[10%] w-full flex justify-between items-center text-gray-300">
-            <h1>NFT</h1>
+            <h1>Somalto</h1>
             <button @click="handleShowNav" class="block sm:hidden">
               <span v-if="!shouldShow" class="las la-bars text-2xl"></span>
               <span v-else class="las la-times text-2xl"></span>
           </button>
           </div>
           <div class="space-x-4 font-bold text-lg hidden sm:block flex-auto w-[70%] text-gray-300">
-              <span><a href="" class="text-[#B225CE] capitalize hover:text-[#B225CE]">home</a></span>
+              <span><router-link :to="{name: 'Home'}" active-class="text-[#B225CE]" class="capitalize hover:text-[#B225CE]">home</router-link></span>
               <span><a href="" class="hover:text-[#B225CE] capitalize">Explore</a></span>
-              <span><a href="" class="hover:text-[#B225CE] capitalize">Marketplace</a></span>
+              <span><router-link :to="{name: 'MarketPlace'}" active-class="text-[#B225CE]" class="hover:text-[#B225CE] capitalize">Marketplace</router-link></span>
               <span><a href="" class="hover:text-[#B225CE] capitalize">News</a></span>
-              <span><a href="" class="hover:text-[#B225CE] capitalize">Register</a></span>
-              <span><a href="" class="hover:text-[#B225CE] capitalize">login</a></span>
+              <span><a href="" class="hover:text-[#B225CE] capitalize">Connect Wallet</a></span>
           </div>
           <div class="flex-auto hidden sm:block">
               <div class="flex space-x-3 items-center">
@@ -40,13 +39,13 @@
       <div v-if="shouldShow" class="block relative sm:hidden bg-gray-500 px-4 py-6 animate-fade-in-up glass">
         <div class="flex divide-y divide-gray-700 flex-col">
           <div class="py-3">
-              <a href="">Home</a>
+              <router-link :to="{name: 'Home'}">Home</router-link>
           </div>
           <div class="py-3">
               <a href="">Explore</a>
           </div>
           <div class="py-3">
-              <a href="">Marketplace</a>
+              <router-link :to="{name: 'MarketPlace'}" class="w-full">Marketplace</router-link>
           </div>
           <div class="py-3">
               <a href="">Investors</a>
@@ -55,10 +54,7 @@
               <a href="">News</a>
           </div>
           <div class="py-3">
-              <a href="">Create account</a>
-          </div>
-          <div class="py-3">
-              <a href="">Login</a>
+              <a href="">Connect wallet</a>
           </div>
       </div>
       <a href="">
@@ -79,7 +75,15 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, watch } from 'vue'
+import {useRoute} from 'vue-router'
+
+const route = useRoute();
+
+watch(route, (newValue, oldValue) => {
+    shouldShow.value = false;
+})
+
 const scrollPosition = ref(null)
 
 function handlecroll () {

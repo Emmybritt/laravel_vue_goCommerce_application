@@ -1,9 +1,9 @@
 <template>
-  <div class="py-[3rem] px-[12rem] mt-[3rem]  bg-slate-50">
-      <h1 class="text-lg font-bold text-orange-600 text-center">Courses</h1>
-      <p class="text-4xl font-signika font-extrabold text-center">Popular Category</p>
+  <div class="py-[3rem] px-[1rem] md:px-[12rem] mt-[3rem]  bg-slate-50">
+      <h1 class="text-2xl font-signika font-bold text-orange-600 text-center">Categories</h1>
+      <p class="text-4xl font-signika font-extrabold text-center">Popular Categories</p>
       <div class="mt-6">
-          <div class="grid grid-cols-4 gap-3">
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
               <router-link :to="{name: 'SingleCourseCategory', query: {category: category.title} }" v-for="category in CourseCategories" :key="category.id">
                   <a href="#" class="bg-white items-center space-x-1 drop-shadow-md p-3 flex">
                       <div class="text-orange-600">

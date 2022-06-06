@@ -2,14 +2,16 @@ import {createRouter, createWebHistory} from 'vue-router'
 import store from '../store'
 import PageLayout from '../layouts/PageLayout.vue'
 import Home from '../views/Home.vue'
+import MarketPlace from '../views/MarketPlace.vue'
 
 const routes = [
     {
-        path:'/',
+        path:'/home',
         name: 'PageLayout',
         component: PageLayout,
         children: [
-            {path: '/', component: Home, name: 'Home'}
+            {path: '/', component: Home, name: 'Home'},
+            {path: '/market-place', component: MarketPlace, name: 'MarketPlace'},
         ]
     },
 ];

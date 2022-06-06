@@ -181,6 +181,14 @@ const store = createStore({
             token: localStorage.getItem("TOKEN"),
             type: null,
         },
+        notification: {
+            type: null,
+            message: '',
+            show: false,
+        },
+        popularCourse: {
+            data: null,
+        },
         cart: {
             savedItem: [
                 {
@@ -194,15 +202,56 @@ const store = createStore({
     },
     getters: {},
     actions: {
-        
+        getPopularCourses({commit}) {
+            return axiosClient.get("/popularCourse").then((res) => {
+                commit("setPopularCourse", res.data);
+            })
+        },
+        register({commit}, user) {
+            // console.log(user);
+            return axiosClient.post("/register", user).then((res) => {
+                commit("setUser", res.data);
+                commit("setUserToken", res.data);
+                return res;
+            })
+        },
+        login({commit}, user) {
+            return axiosClient.post("/login", user).then((res) => {
+                commit("setUser", res.data);
+                commit("setUserToken", res.data);
+            })
+        },
+        Logout({commit}) {
+            return axiosClient.post('/logout').then(() => {
+                localStorage.removeItem("TOKEN");
+            })
+        }
     },
     mutations: {
-       setSavedItemTotrue (state, id) {
+        setPopularCourse: (state, courses) => {
+            state.popularCourse.data = courses;
+        },
+        notify: (state, {type, message}) => {
+            state.notification.type = type;
+            state.notification.message = message;
+            state.notification.show = true;
+
+            setTimeout(()=> {
+                state.notification.show = false;
+            }, 3000 )
+        },
+        setUser: (state, data) => {
+            state.user.data = data.user;
+        },
+        setUserToken: (state, data) =>{
+            state.user.token = localStorage.setItem("TOKEN", data.token)
+        },
+       setSavedItemTotrue: (state, id) =>{
         let course = state.popularCourses.filter(cours => cours.id == id);
         course.map((sav) => sav.saved = !sav.saved);
             
        },
-       setCartItem (state, itemId) {
+       setCartItem: (state, itemId) => {
         
         
        }

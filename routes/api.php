@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 // use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RolePermissionController;
+use App\Http\Controllers\PopularCourseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,9 +30,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/email/verify/{id}/{hash}', [AuthController::class, 'verified'])->middleware(['auth', 'signed'])->name('verification.verify');
+Route::get('/popularCourse', [PopularCourseController::class, 'index']);
+
+// Route::get('/email/verify/{id}/{hash}', [AuthController::class, 'verified'])->middleware(['auth', 'signed'])->name('verification.verify');
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
-Route::post('/email/verification-notification', [AuthController::class, 'resendemailverificationlink'])->middleware(['auth','throttle:6,1'])->name('verification.send');
+// Route::post('/email/verification-notification', [AuthController::class, 'resendemailverificationlink'])->middleware(['auth','throttle:6,1'])->name('verification.send');
 
 // i will create a route on my front end that will redirect my user to another oage, telling them that email verification has been sent to their mail
