@@ -28,6 +28,7 @@ return new class extends Migration
             $table->string('duration');
             $table->string('lessons');
             $table->string('level');
+            $table->string('tag')->nullable();
             $table->string('status');
             $table->timestamps();
         });

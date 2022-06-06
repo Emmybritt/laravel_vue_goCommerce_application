@@ -22,7 +22,8 @@
                   <p class="text-gray-600 text-sm font-medium">{{popular.description}}</p>
                   <div class="flex justify-between items-center">
                     <div class="flex" v-if="popular.rating">
-                      <span v-for="(star, i) in popular.rating" :key="i" class="las text-sm la-star text-yellow-400"></span>
+                      <!-- <span v-for="(star, i) in popular.rating" :key="i" class="las text-sm la-star text-yellow-400"></span> -->
+                      <span class="text-sm text-orange-600 font-medium">{{popular.rating}} star</span>
                     </div>
                     <div class="flex text-sm divide-x divide-gray-400 space-x-1">
                         <div>

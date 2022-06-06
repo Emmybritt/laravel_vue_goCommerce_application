@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RolePermissionController;
 use App\Http\Controllers\PopularCourseController;
-
+use App\Http\Controllers\CourseController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -31,6 +31,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/popularCourse', [PopularCourseController::class, 'index']);
+Route::get('/course', [CourseController::class, 'index']);
+Route::get('/course_counts', [CourseController::class, 'getTotalcourseCount']);
+Route::get('/course_details/{details}', [CourseController::class, 'getCourseDetails']);
 
 // Route::get('/email/verify/{id}/{hash}', [AuthController::class, 'verified'])->middleware(['auth', 'signed'])->name('verification.verify');
 Route::post('/register', [AuthController::class, 'register']);

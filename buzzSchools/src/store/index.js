@@ -186,6 +186,15 @@ const store = createStore({
             message: '',
             show: false,
         },
+        courses: {
+            data: null,
+            total_lessons: null,
+            total_hours: null,
+            total_courses: null,
+            details: {
+                data: null,
+            }
+        },
         popularCourse: {
             data: null,
         },
@@ -202,6 +211,24 @@ const store = createStore({
     },
     getters: {},
     actions: {
+        getCourseDetails({commit}, title) {
+            return axiosClient.get(`/course_details/${title}`).then((res) => {
+                commit("setCourseDetails", res.data);
+                return res;
+            })
+        },
+        getCourseCounts({commit}) {
+            return axiosClient.get("/course_counts").then((res) => {
+                commit("SetCourseCounts", res.data);
+                return res;
+            })
+        },
+        getAllCoures({commit}) {
+            return axiosClient.get('/course').then((res) => {
+                commit("SetCourseDetails", res.data);
+                return res; 
+            });
+        },
         getPopularCourses({commit}) {
             return axiosClient.get("/popularCourse").then((res) => {
                 commit("setPopularCourse", res.data);
@@ -228,6 +255,18 @@ const store = createStore({
         }
     },
     mutations: {
+        SetCourseCounts: (state, details) => {
+            state.courses.details.data = details;
+        },
+        SetCourseCounts: (state, counts) => {
+            // console.log(counts);
+            state.courses.total_lessons = counts.lessonsCounts;
+            state.courses.total_hours = counts.hoursCount;
+            state.courses.total_courses = counts.courseCount;
+        },
+        SetCourseDetails: (state, courses) => {
+            state.courses.data = courses;
+        },
         setPopularCourse: (state, courses) => {
             state.popularCourse.data = courses;
         },
