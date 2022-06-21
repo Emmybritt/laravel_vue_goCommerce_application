@@ -74,8 +74,7 @@
               required
               class="
                 w-full
-                h-[15rem]
-                md:h-[10rem]
+                h-[10rem]
                 text-slate-700
                 font-signika
                 text-lg
