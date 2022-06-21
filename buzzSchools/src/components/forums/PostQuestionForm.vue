@@ -1,5 +1,5 @@
 <template>
-  <div class="text-white p-4 font-source">
+  <div class="text-white p-4 font-source overflow-auto">
     <div
       v-if="!token"
       class="flex flex-col items-center py-[4rem] justify-center"
@@ -74,7 +74,7 @@
               required
               class="
                 w-full
-                h-[10rem]
+                h-[5rem]
                 text-slate-700
                 font-signika
                 text-lg
