@@ -42,8 +42,8 @@ class CourseController extends Controller
         ]);
     }
 
-    public function getCourseDetails(Request $request, $details) {
-
+    public function getCourseDetails($details) {
+        return $details;
     }
 
     public function store(StoreCourseRequest $request)

@@ -191,6 +191,7 @@ const store = createStore({
             total_lessons: null,
             total_hours: null,
             total_courses: null,
+            pagination_links: null,
             details: {
                 data: null,
             }
@@ -211,6 +212,13 @@ const store = createStore({
     },
     getters: {},
     actions: {
+        SubmitQuestion({commit}, questionData){
+            return axiosClient.post('/question', questionData).then((res)  => {
+                // commit("setQuestion", res.data)
+                return res;
+            })
+            // console.log(questionData);
+        },
         getCourseDetails({commit}, title) {
             return axiosClient.get(`/course_details/${title}`).then((res) => {
                 commit("setCourseDetails", res.data);
@@ -223,9 +231,10 @@ const store = createStore({
                 return res;
             })
         },
-        getAllCoures({commit}) {
-            return axiosClient.get('/course').then((res) => {
-                commit("SetCourseDetails", res.data);
+        getAllCoures({commit}, {url = null} = {}) {
+            url = url || "course";
+            return axiosClient.get(url).then((res) => {
+                commit("SetCourse", res.data);
                 return res; 
             });
         },
@@ -264,8 +273,9 @@ const store = createStore({
             state.courses.total_hours = counts.hoursCount;
             state.courses.total_courses = counts.courseCount;
         },
-        SetCourseDetails: (state, courses) => {
+        SetCourse: (state, courses) => {
             state.courses.data = courses;
+            state.courses.pagination_links = courses.meta.links;
         },
         setPopularCourse: (state, courses) => {
             state.popularCourse.data = courses;

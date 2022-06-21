@@ -52,13 +52,16 @@
       <!-- Course Pagination here -->
       <div class="py-6">
         <div class="flex justify-center items-center space-x-1 flex-wrap">
-        <a href="#" class="border border-purple-400 px-3 py-1 rounded-full hover:bg-purple-500 hover:text-white">Previous</a>
-        <a href="#" class="border border-purple-400 px-3 py-1 rounded-full hover:bg-purple-500 hover:text-white" v-for="num in 5" :key="num">{{ num }}</a>
-        <a href="" class="border border-purple-400 px-3 py-1 rounded-full hover:bg-purple-500 bg-purple-500 text-white hover:text-white">6</a>
-        <a href="#" class="border border-purple-400 px-3 py-1 rounded-full hover:bg-purple-500 hover:text-white">Next</a>
+        <a href="#" 
+        v-for="(link, i) in pagination_link" 
+        :key="i" 
+        :disabled="!link.url"
+        @click.prevent="getForPage(link)"
+        v-html="link.label"
+        :class="[link.active ? 'bg-purple-400 text-white shadow-md shadow-purple-300' : '']"
+        class="border border-purple-400 px-3 py-1 rounded-full hover:bg-purple-500 hover:text-white"></a>
       </div>
       </div>
-      
       <!-- Course Pagination here -->
   </div>
 </template>
@@ -74,6 +77,8 @@ const errorMsg = ref('');
 const courseCounts = computed(() => store.state.courses.total_courses);
 const lessonsCounts = computed(() => store.state.courses.total_lessons);
 const hoursCounts = computed(() => store.state.courses.total_hours);
+
+const pagination_link = computed(() => store.state.courses.pagination_links);
 
 
 
@@ -100,6 +105,14 @@ store.dispatch("getCourseCounts").then(() => {
   errorMsg.value = 'There was an error loading course';
   CourseIsLoading.value = false;
 })
+
+function getForPage(link) {
+  if (!link.url || link.active) {
+    return;
+  }
+
+  store.dispatch("getAllCoures", {url: link.url});
+}
 </script>
 
 <style>

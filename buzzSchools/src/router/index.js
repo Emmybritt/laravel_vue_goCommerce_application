@@ -16,6 +16,7 @@ import SingleCourseCategory from '../views/courses/SingleCourseCategory.vue'
 import TextHelper from '../views/texthelper/Home.vue'
 import DashboardLayout from '../layouts/dashboard/DashboardLayout.vue'
 import Main from '../views/dashboard/Main.vue'
+import QuestionAnswerForum from '../views/QuestionAnswerForum.vue'
 
 
 const routes = [
@@ -36,6 +37,7 @@ const routes = [
             { path: '/single-course', props: route => ({query: route.query.title}), name: 'SingleCourseView', component: SingleCourseView },
             { path: '/single-course-category', props: route => ({query: route.query.category}), name: 'SingleCourseCategory', component: SingleCourseCategory },
             {path: '/webinars', name: 'Webinars', component: Webinars},
+            {path: 'question-and-answer-forum', name:'QuestionAnswerForum', component: QuestionAnswerForum}
         ],
     },
     {

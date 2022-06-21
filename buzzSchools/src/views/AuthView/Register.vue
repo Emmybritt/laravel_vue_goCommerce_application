@@ -149,6 +149,7 @@ function register() {
     router.push({
       name: "Dashboard",
     });
+    window.location.reload();s
     store.commit("notify", {
       type: 'success',
       message: "Your registeration was successfull",

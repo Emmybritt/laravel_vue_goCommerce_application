@@ -7,6 +7,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RolePermissionController;
 use App\Http\Controllers\PopularCourseController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\QuestionController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -25,6 +26,7 @@ Route::post('/assign_role_to_user/{id}/role/{roles}', [RolePermissionController:
 Route::post('/assign_permission_to_user/{id}/{permissions}', [RolePermissionController::class, 'assignPermissionToUser']);    
 Route::post('/assign_permission_to_role/{role_id}/{permissions}', [RolePermissionController::class, 'assignPermissionToRole']);    
 });
+Route::post('/question', [QuestionController::class, 'store']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

@@ -42,8 +42,8 @@
                   <router-link :to="{name: 'AllCourses'}" class="hover:border-b-2 hover:border-orange-500" active-class="border-b-2 border-orange-500">
                       <div>Courses</div>
                   </router-link>
-                  <router-link :to="{name: 'Webinars'}" class="hover:border-b-2 hover:border-orange-500" active-class="border-b-2 border-orange-500">
-                      <div>Webinars</div>
+                  <router-link :to="{name: 'QuestionAnswerForum'}" class="hover:border-b-2 hover:border-orange-500" active-class="border-b-2 border-orange-500">
+                      <div>Questions & answer forum</div>
                   </router-link>
                   <div class="hover:border-b-2 transition-opacity hover:border-orange-500">
                       <h1><a href="">Blogs</a></h1>
@@ -97,16 +97,16 @@
                   <router-link :to="{name: 'Home'}">Home</router-link>
               </div>
               <div class="py-3">
-                  <router-link :to="{name: 'Home'}">About</router-link>
+                  <router-link :to="{name: 'About'}">About</router-link>
               </div>
               <div class="py-3">
-                  <router-link :to="{name: 'Home'}">Courses</router-link>
+                  <router-link :to="{name: 'AllCourses'}">Courses</router-link>
               </div>
               <div class="py-3">
                   <router-link :to="{name: 'Home'}">Webinars</router-link>
               </div>
               <div class="py-3">
-                  <router-link :to="{name: 'Home'}">Questions & answer forum</router-link>
+                  <router-link :to="{name: 'QuestionAnswerForum'}">Questions & answer forum</router-link>
               </div>
               <div class="py-3">
                   <router-link :to="{name: 'Home'}">Join discord chat</router-link>
@@ -131,12 +131,13 @@
 
 <script setup>
 import {computed, ref, watch} from 'vue'
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 import {useStore} from 'vuex'
 
 const store = useStore();
 
 const userToken = computed(() => store.state.user.token);
+const router = useRouter();
 
 const userProfileShould = ref(false)
 
@@ -157,6 +158,7 @@ function logout() {
         router.push({
             name: "Login",
         })
+        window.location.reload();
     })
 }
 

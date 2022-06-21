@@ -123,6 +123,7 @@ function Login() {
   isLoading.value = true;
   store.dispatch("login", user.value).then(() =>{
     isLoading.value = false;
+    window.location.reload();
     router.push({
       name: "Dashboard",
     });
