@@ -178,8 +178,7 @@ const store = createStore({
     state: {
         user: {
             data: null,
-            // token: localStorage.getItem("TOKEN"),
-            token: 1234,
+            token: localStorage.getItem("TOKEN"),
             type: null,
         },
         notification: {
